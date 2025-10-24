@@ -23,5 +23,6 @@ void test_validate_my_username()
      const char *hardcoded = my_username();
      char *from_file = malloc_username_from_conf_file();
 
-    TEST_ASSERT_TRUE_MESSAGE(hardcoded,from_file);
+    TEST_ASSERT_TRUE_MESSAGE(strcmp(hardcoded,from_file)==0,"Both username matches!");
+    free(from_file);
 }
