@@ -23,5 +23,5 @@ void test_validate_my_username()
      char *hardcoded = my_username();
      char *from_file = malloc_username_from_conf_file();
 
-    TEST_ASSERT_TRUE_MESSAGE(,);
+    TEST_ASSERT_TRUE_MESSAGE(hardcoded,from_file);
 }
